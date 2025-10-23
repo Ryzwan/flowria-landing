@@ -1,209 +1,219 @@
-# Flowria — Landing Page
+# Flowria - Landing Page
 
-Landing page one-page moderne pour Flowria, expert en automatisation IA et agents intelligents.
+Landing page moderne et futuriste pour Flowria, expert en automatisation IA & No-Code.
 
-## 🚀 Stack Technique
+## 🚀 Fonctionnalités
 
-- **Next.js 16** (App Router, TypeScript)
-- **Tailwind CSS 4** (Design system custom)
-- **Framer Motion** (Animations)
-- **Lucide React** (Icônes)
-- **Zod** (Validation formulaire - à venir)
+- ✅ Design ultra moderne et futuriste inspiré d'Apres AI
+- ✅ Hero section avec fond animé (particules canvas) et scroll indicator
+- ✅ Logo cloud avec défilement infini
+- ✅ Stats counter avec animations au scroll
+- ✅ Feature showcase (4 capacités avec visualisations)
+- ✅ Flow diagram (process en 4 étapes)
+- ✅ FAQ avec accordéons animés
+- ✅ Formulaire de contact avec validation
+- ✅ Footer complet
+- ✅ 100% responsive
+- ✅ Animations fluides et effet WOW
+- ✅ Code organisé en composants/sections
 
 ## 📁 Structure du Projet
 
 ```
-flowria/
-├── app/                      # Next.js App Router
-│   ├── layout.tsx           # Layout racine avec metadata SEO
-│   └── page.tsx             # Page d'accueil
-├── components/
-│   ├── atoms/               # Composants de base
-│   │   ├── Button.tsx
-│   │   ├── Heading.tsx
-│   │   ├── Text.tsx
-│   │   └── Badge.tsx
-│   ├── molecules/           # Composants composés
-│   │   └── Card.tsx
-│   └── organisms/           # Composants complexes
-│       ├── Section.tsx
-│       ├── Container.tsx
-│       └── HeroSection.tsx
-├── content/                 # Contenu statique
-│   ├── features.ts         # Expertises/capacités
-│   ├── faq.ts              # Questions fréquentes
-│   └── process.ts          # Étapes du process
-├── docs/                    # Documentation projet
-│   ├── flowria-playbook.md      # Guidelines Lead Dev
-│   ├── design-system.md         # Tokens et patterns
-│   └── component-catalog.md     # Catalogue composants
-├── lib/
-│   └── utils.ts            # Utilitaires (cn)
-└── styles/
-    ├── globals.css         # Styles globaux
-    └── tokens.css          # Variables CSS (couleurs, spacing...)
+flowria-landing/
+├── index.html              # Page HTML principale
+├── css/
+│   ├── main.css           # Styles globaux et variables
+│   ├── hero.css           # Styles de la section Hero
+│   ├── sections.css       # Styles des sections
+│   └── animations.css     # Keyframes et animations
+├── js/
+│   ├── main.js            # JavaScript principal
+│   ├── animations.js      # Animations canvas et effets
+│   └── interactions.js    # Interactions utilisateur
+├── assets/
+│   ├── logos/             # Logos (placeholder à ajouter)
+│   └── images/            # Images features (placeholder à ajouter)
+└── README.md
 ```
 
-## 🎨 Design System
+## 🎨 Placeholders Images à Créer
+
+### Logos Clients (assets/logos/)
+Créer 6 logos clients en PNG (200x80px) :
+- `client-1.png` à `client-6.png`
+- Format : PNG avec fond transparent
+- Style : Grayscale pour l'effet hover
+
+### Logo Flowria (assets/logos/)
+- `flowria-logo.png` (40x40px)
+- Style : Gradient violet/rose avec icône abstraite
+
+### Images Features (assets/images/)
+Créer 4 mockups pour les features (800x600px) :
+- `feature-automation.png` - Dashboard d'automatisation
+- `feature-ai.png` - Interface chatbot IA
+- `feature-integration.png` - Connexions entre outils
+- `feature-data.png` - Graphiques et analytics
+
+**Alternative rapide** : Utiliser des placeholders SVG inline ou des services comme:
+- https://placeholder.com/
+- https://via.placeholder.com/
+- Ou créer des SVG avec dégradés
+
+## 🚀 Installation et Lancement
+
+### Option 1 : Ouvrir directement
+```bash
+# Ouvrir le fichier index.html dans votre navigateur
+open index.html
+```
+
+### Option 2 : Serveur local (recommandé)
+```bash
+# Avec Python 3
+python3 -m http.server 8000
+
+# Avec Node.js (npx)
+npx serve
+
+# Avec PHP
+php -S localhost:8000
+```
+
+Puis ouvrir : `http://localhost:8000`
+
+## ⚙️ Personnalisation
 
 ### Couleurs
+Modifier les variables CSS dans `css/main.css` :
+```css
+:root {
+    --color-primary: #6366f1;
+    --color-secondary: #ec4899;
+    --color-accent: #8b5cf6;
+}
+```
 
-- **Primary (Teal)** : `#00E5B9` — CTA principal, accents
-- **Secondary (Purple)** : `#7419E2` — Surfaces, accents secondaires
-- **Background** : Noir très sombre (`hsl(0, 0%, 3%)`)
-
-### Typographie
-
-- **Police** : Inter (Google Fonts)
-- **Hiérarchie** : Display XL → H1 → H2 → H3 → Body
+### Contenu
+- Textes : Modifier directement dans `index.html`
+- Stats : Modifier les attributs `data-target` dans la section stats
+- FAQ : Ajouter/modifier les questions dans la section FAQ
 
 ### Animations
+- Vitesse : Modifier les durées dans `css/animations.css`
+- Particules : Ajuster `particleCount` dans `js/animations.js`
 
-- Gradient mesh animé (hero)
-- Reveal on scroll (Framer Motion)
-- Hover states avec micro-mouvements
-- Respect de `prefers-reduced-motion`
+## 📱 Responsive
 
-## 🛠️ Développement
+Le site est entièrement responsive avec breakpoints :
+- Mobile : < 640px
+- Tablet : 640px - 1024px
+- Desktop : > 1024px
 
-### Installation
+## 🎯 Performance
 
+- Code vanille (pas de framework)
+- Animations GPU-accelerated
+- Lazy loading des images
+- Intersection Observer pour animations au scroll
+- Optimisé pour Core Web Vitals
+
+## 🧪 Tests
+
+### Checklist avant déploiement
+- [ ] Remplacer tous les placeholders d'images
+- [ ] Tester sur Chrome, Firefox, Safari
+- [ ] Tester sur mobile (responsive)
+- [ ] Vérifier formulaire de contact
+- [ ] Tester toutes les animations
+- [ ] Valider HTML/CSS (W3C)
+- [ ] Tester accessibilité (WAVE, Lighthouse)
+- [ ] Optimiser images (compression)
+
+### Tests Navigation
+- [ ] Menu mobile fonctionne
+- [ ] Liens d'ancrage smooth scroll
+- [ ] Scroll to top button apparaît
+
+### Tests Interactions
+- [ ] Compteurs stats s'animent au scroll
+- [ ] FAQ accordéons s'ouvrent/ferment
+- [ ] Formulaire valide les champs
+- [ ] Hover effects sur cards
+- [ ] Particules canvas interactives
+
+## 📧 Configuration Formulaire
+
+Le formulaire est actuellement en mode démo (console.log).
+
+Pour le rendre fonctionnel, modifier `js/main.js` :
+
+```javascript
+// Remplacer la simulation par un vrai appel API
+const response = await fetch('https://votre-api.com/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+});
+```
+
+Options d'intégration :
+- **Formspree** : https://formspree.io/
+- **EmailJS** : https://www.emailjs.com/
+- **Netlify Forms** : Built-in si hébergé sur Netlify
+- **Custom Backend** : Node.js, PHP, etc.
+
+## 🌐 Déploiement
+
+### Netlify (recommandé)
 ```bash
-npm install
+# Drag & Drop le dossier sur netlify.com
+# Ou via CLI
+netlify deploy --prod
 ```
 
-### Commandes
-
+### Vercel
 ```bash
-npm run dev      # Serveur de développement (localhost:3000)
-npm run build    # Build de production
-npm run start    # Serveur de production
-npm run lint     # Linter ESLint
-npm run format   # Formatter Prettier
+vercel --prod
 ```
 
-### Développement Local
-
-1. Lancer le serveur :
-   ```bash
-   npm run dev
-   ```
-
-2. Ouvrir [http://localhost:3000](http://localhost:3000)
-
-3. Modifier les fichiers :
-   - **Contenu** : `content/*.ts`
-   - **Composants** : `components/`
-   - **Styles** : `styles/`
-
-## 📝 Éditer le Contenu
-
-### Features / Expertises
-
-Fichier : `content/features.ts`
-
-```typescript
-export const features: Feature[] = [
-  {
-    id: 'unique-id',
-    title: 'Titre',
-    description: 'Description courte',
-    icon: 'Zap', // Nom de l'icône lucide-react
-    category: 'Catégorie',
-  },
-]
+### GitHub Pages
+```bash
+git add .
+git commit -m "Deploy landing page"
+git push origin main
+# Activer GitHub Pages dans les settings du repo
 ```
 
-### FAQ
+### Serveur traditionnel
+- Upload via FTP/SFTP
+- Configurer domaine + HTTPS
+- Pas de build nécessaire (HTML statique)
 
-Fichier : `content/faq.ts`
+## 🔧 Améliorations Futures
 
-```typescript
-export const faqs: Faq[] = [
-  {
-    question: 'Question ?',
-    answer: 'Réponse détaillée...',
-  },
-]
-```
+- [ ] Mode sombre/clair
+- [ ] Multi-langue (i18n)
+- [ ] Blog section
+- [ ] Témoignages clients
+- [ ] Portfolio/Case studies
+- [ ] Analytics (Google Analytics, Plausible)
+- [ ] SEO meta tags optimisés
+- [ ] Open Graph images
+- [ ] Schema.org structured data
 
-### Process
+## 📄 Licence
 
-Fichier : `content/process.ts`
+© 2025 Flowria. Tous droits réservés.
 
-```typescript
-export const processSteps: ProcessStep[] = [
-  {
-    id: 'step-id',
-    number: 1,
-    title: 'Titre',
-    description: 'Description',
-    icon: 'Search', // Nom de l'icône lucide-react
-  },
-]
-```
+## 👨‍💻 Support
 
-## 🎯 Bonnes Pratiques
-
-### Avant de coder
-
-1. **Lire la documentation** :
-   - `docs/flowria-playbook.md` — Workflow et guidelines
-   - `docs/design-system.md` — Tokens et patterns
-   - `docs/component-catalog.md` — Composants disponibles
-
-2. **Vérifier l'existant** :
-   - Un composant similaire existe-t-il déjà ?
-   - Puis-je composer des composants existants ?
-
-3. **Respecter le design system** :
-   - Utiliser les tokens CSS (`--flowria-teal`, `--spacing-xl`...)
-   - Suivre la hiérarchie typographique
-   - Appliquer les patterns définis (glass, hover...)
-
-### Qualité du code
-
-- **TypeScript strict** : Pas de `any`, typer toutes les props
-- **Accessibilité** : Focus states, contrastes AA/AAA, keyboard navigation
-- **Performance** : `next/image`, lazy loading, animations légères
-- **Pas de contenu fictif** : Uniquement des placeholders explicites
-
-## 🚧 À Compléter
-
-### Phase actuelle : MVP de base
-
-✅ **Fait** :
-- Setup Next.js + Tailwind + Framer Motion
-- Documentation (Playbook, Design System, Catalog)
-- Design tokens et styles globaux
-- Composants de base (Button, Heading, Text, Badge, Card)
-- Sections principales (Hero, Expertise, Process, About)
-
-🔄 **En cours / À faire** :
-- [ ] Section Logo Cloud (logos clients — placeholders)
-- [ ] Section "Problème → Effet" (barre avec flèche animée)
-- [ ] Section Études de cas (carousel)
-- [ ] Section FAQ (Accordion shadcn)
-- [ ] Formulaire de contact (validation Zod + Server Action)
-- [ ] Page `/success` après envoi formulaire
-- [ ] Navbar sticky translucide
-- [ ] Footer complet
-- [ ] next-sitemap (sitemap.xml + robots.txt)
-- [ ] OG image générative
-- [ ] Husky hooks (pre-commit)
-
-## 📚 Ressources
-
-- [Next.js Docs](https://nextjs.org/docs)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [Framer Motion Docs](https://www.framer.com/motion/)
-- [Lucide Icons](https://lucide.dev/)
-- [Inspiration : "Après 1" (Landingfolio)](https://landingfolio.com/)
-
-## 📄 License
-
-Propriétaire — Flowria © 2025
+Pour toute question :
+- Email : contact@flowria.com
+- Basé à Marseille, France
+- Remote disponible partout
 
 ---
 
-**Contact** : Pour toute question, contactez Ryzwan
+**Fait avec ❤️ à Marseille**
