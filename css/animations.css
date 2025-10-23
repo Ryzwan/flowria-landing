@@ -521,3 +521,114 @@
     width: 300px;
     height: 300px;
 }
+
+/* ========================================
+   SLOGAN SECTION ANIMATIONS
+   ======================================== */
+
+/* Breathe animation for background */
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+/* Breathe text animation */
+@keyframes breathe-text {
+    0%, 100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(1.02);
+        filter: brightness(1.1);
+    }
+}
+
+/* Pulse glow animation for gradient text */
+@keyframes pulse-glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 20px rgba(0, 228, 184, 0.6));
+    }
+    50% {
+        filter: drop-shadow(0 0 35px rgba(0, 228, 184, 0.9));
+    }
+}
+
+/* Pulse arrow animation */
+@keyframes pulse-arrow {
+    0%, 100% {
+        transform: scale(1) translateX(0);
+        filter: drop-shadow(0 0 20px rgba(0, 228, 184, 0.6));
+    }
+    50% {
+        transform: scale(1.1) translateX(5px);
+        filter: drop-shadow(0 0 30px rgba(0, 228, 184, 0.9));
+    }
+}
+
+/* Pulse arrow animation - version rotée pour responsive */
+@keyframes pulse-arrow-rotated {
+    0%, 100% {
+        transform: rotate(90deg) scale(1) translateX(0);
+        filter: drop-shadow(0 0 20px rgba(0, 228, 184, 0.6));
+    }
+    50% {
+        transform: rotate(90deg) scale(1.1) translateX(5px);
+        filter: drop-shadow(0 0 30px rgba(0, 228, 184, 0.9));
+    }
+}
+
+/* Gradient flow animation */
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Slow rotation animation */
+@keyframes rotate-slow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* Gradient rotation for cards */
+@keyframes gradient-rotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
