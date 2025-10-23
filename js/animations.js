@@ -86,7 +86,7 @@ class ParticlesAnimation {
                 if (distance < this.connectionDistance) {
                     const opacity = (1 - distance / this.connectionDistance) * 0.3;
                     this.ctx.beginPath();
-                    this.ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
+                    this.ctx.strokeStyle = `rgba(0, 228, 184, ${opacity})`;
                     this.ctx.lineWidth = 1;
                     this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
                     this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
@@ -183,7 +183,7 @@ class CursorGlow {
             width: 400px;
             height: 400px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 228, 184, 0.15) 0%, transparent 70%);
             pointer-events: none;
             transform: translate(-50%, -50%);
             z-index: 9999;
@@ -276,7 +276,7 @@ class ScrollProgress {
             top: 0;
             left: 0;
             height: 3px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+            background: linear-gradient(90deg, #00e4b8, #3b9ec8, #7419e1);
             z-index: 10000;
             transition: width 0.1s ease;
         `;

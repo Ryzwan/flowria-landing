@@ -278,7 +278,7 @@ window.addEventListener('load', () => {
 
 console.log(
     '%c🚀 Flowria - Automatisation IA & No-Code',
-    'color: #6366f1; font-size: 20px; font-weight: bold;'
+    'color: #00e4b8; font-size: 20px; font-weight: bold;'
 );
 console.log(
     '%cSite développé avec ❤️ à Marseille',

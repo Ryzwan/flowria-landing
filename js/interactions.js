@@ -178,7 +178,7 @@ class ScrollToTop {
             right: 2rem;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #00e4b8, #7419e1);
             border: none;
             border-radius: 50%;
             color: white;
@@ -187,7 +187,7 @@ class ScrollToTop {
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1000;
-            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 4px 16px rgba(0, 228, 184, 0.4);
         `;
         
         button.querySelector('svg').style.cssText = `
@@ -219,12 +219,12 @@ class ScrollToTop {
         
         this.button.addEventListener('mouseenter', () => {
             this.button.style.transform = 'translateY(-5px)';
-            this.button.style.boxShadow = '0 8px 24px rgba(99, 102, 241, 0.6)';
+            this.button.style.boxShadow = '0 8px 24px rgba(0, 228, 184, 0.6)';
         });
         
         this.button.addEventListener('mouseleave', () => {
             this.button.style.transform = '';
-            this.button.style.boxShadow = '0 4px 16px rgba(99, 102, 241, 0.4)';
+            this.button.style.boxShadow = '0 4px 16px rgba(0, 228, 184, 0.4)';
         });
     }
 }
@@ -275,7 +275,7 @@ function showToast(message, duration = 3000) {
         bottom: 2rem;
         left: 50%;
         transform: translateX(-50%) translateY(100px);
-        background: rgba(99, 102, 241, 0.95);
+        background: rgba(0, 228, 184, 0.95);
         color: white;
         padding: 1rem 2rem;
         border-radius: 12px;

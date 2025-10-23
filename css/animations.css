@@ -49,11 +49,11 @@
 /* Node Glow Animation */
 @keyframes nodeGlow {
     0%, 100% {
-        box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+        box-shadow: 0 0 20px rgba(0, 228, 184, 0.3);
         transform: scale(1);
     }
     50% {
-        box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+        box-shadow: 0 0 40px rgba(0, 228, 184, 0.6);
         transform: scale(1.05);
     }
 }
@@ -238,7 +238,7 @@
 .spinner {
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(99, 102, 241, 0.2);
+    border: 3px solid rgba(0, 228, 184, 0.2);
     border-top-color: var(--color-primary);
     border-radius: 50%;
     animation: rotate 0.8s linear infinite;
@@ -254,7 +254,7 @@
 }
 
 .hover-glow:hover {
-    box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 40px rgba(0, 228, 184, 0.4);
     transform: translateY(-2px);
 }
 

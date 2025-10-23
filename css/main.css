@@ -9,16 +9,16 @@
     --color-bg-card: #1a1a24;
     --color-text: #ffffff;
     --color-text-muted: #a0a0b0;
-    --color-primary: #6366f1;
-    --color-secondary: #ec4899;
-    --color-accent: #8b5cf6;
+    --color-primary: #00e4b8;
+    --color-secondary: #7419e1;
+    --color-accent: #00e4b8;
     --color-success: #10b981;
     --color-error: #ef4444;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    --gradient-primary: linear-gradient(135deg, #00e4b8 0%, #3b9ec8 50%, #7419e1 100%);
     --gradient-hero: linear-gradient(180deg, #0a0a0f 0%, #1a1035 50%, #0a0a0f 100%);
-    --gradient-card: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+    --gradient-card: linear-gradient(135deg, rgba(0, 228, 184, 0.1) 0%, rgba(116, 25, 225, 0.1) 100%);
     
     /* Spacing */
     --container-width: 1280px;
@@ -38,7 +38,7 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-    --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+    --shadow-glow: 0 0 40px rgba(0, 228, 184, 0.3);
 }
 
 /* Reset */
@@ -132,12 +132,12 @@ section {
 .btn-primary {
     background: var(--gradient-primary);
     color: white;
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 228, 184, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.6);
+    box-shadow: 0 8px 24px rgba(0, 228, 184, 0.6);
 }
 
 .btn-secondary {
@@ -250,8 +250,8 @@ section {
 .section-label {
     display: inline-block;
     padding: 0.5rem 1.25rem;
-    background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.3);
+    background: rgba(0, 228, 184, 0.1);
+    border: 1px solid rgba(0, 228, 184, 0.3);
     border-radius: 100px;
     color: var(--color-primary);
     font-size: 0.875rem;
