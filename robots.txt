@@ -1,0 +1,36 @@
+# Robots.txt pour Flowria - Automatisation IA & Chatbot TPE PME Marseille
+# https://flowria.com
+
+User-agent: *
+Allow: /
+
+# Fichiers et répertoires autorisés
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Sitemap
+Sitemap: https://flowria.com/sitemap.xml
+
+# Crawl-delay (optionnel, ajuster si nécessaire)
+# Crawl-delay: 1
+
+# Directives pour les moteurs de recherche spécifiques
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Bloquer les bots malveillants connus
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
