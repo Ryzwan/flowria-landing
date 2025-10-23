@@ -1097,7 +1097,13 @@
                 </div>
 
                 <div class="contact-form-container">
-                    <form id="contact-form" class="contact-form">
+                    <form id="contact-form" class="contact-form" action="https://formsubmit.co/contact@flowria.io" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="Nouveau message depuis Flowria.com">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none">
+                        
                         <div class="form-group">
                             <label for="name">Nom complet *</label>
                             <input type="text" id="name" name="name" required 
@@ -1124,7 +1130,7 @@
                                       placeholder="Parlez-moi de vos besoins en automatisation..."></textarea>
                         </div>
                         <div class="form-group full-width">
-                            <button type="submit" class="btn-primary btn-large">
+                            <button type="submit" class="btn-primary btn-large" id="submit-btn">
                                 Envoyer le message
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="22" y1="2" x2="11" y2="13"/>

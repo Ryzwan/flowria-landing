@@ -481,3 +481,78 @@ class AccessibilityEnhancements {
 document.addEventListener('DOMContentLoaded', () => {
     new AccessibilityEnhancements();
 });
+
+// ========================================
+// CONTACT FORM HANDLING
+// ========================================
+
+class ContactFormHandler {
+    constructor() {
+        this.form = document.getElementById('contact-form');
+        this.submitBtn = document.getElementById('submit-btn');
+        this.init();
+    }
+    
+    init() {
+        if (!this.form) return;
+        
+        this.form.addEventListener('submit', (e) => {
+            this.handleSubmit(e);
+        });
+    }
+    
+    handleSubmit(e) {
+        // Validation basique
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+        
+        if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+            e.preventDefault();
+            showToast('Veuillez remplir tous les champs obligatoires', 3000);
+            return;
+        }
+        
+        // Validation email format
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value.trim())) {
+            e.preventDefault();
+            showToast('Veuillez entrer une adresse email valide', 3000);
+            return;
+        }
+        
+        // Afficher l'état de chargement (sans bloquer la soumission)
+        this.submitBtn.disabled = true;
+        this.submitBtn.style.opacity = '0.7';
+        this.submitBtn.style.cursor = 'not-allowed';
+        
+        this.submitBtn.innerHTML = `
+            <svg style="width: 24px; height: 24px; animation: spin 1s linear infinite;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" stroke-opacity="0.25"/>
+                <path d="M12 2 A10 10 0 0 1 22 12" stroke-linecap="round"/>
+            </svg>
+            Envoi en cours...
+        `;
+        
+        // Ajouter l'animation de rotation
+        if (!document.getElementById('spin-animation')) {
+            const style = document.createElement('style');
+            style.id = 'spin-animation';
+            style.textContent = `
+                @keyframes spin {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Laisser le formulaire se soumettre normalement à FormSubmit
+        // FormSubmit redirigera vers sa page de confirmation
+    }
+}
+
+// Initialize contact form handler
+document.addEventListener('DOMContentLoaded', () => {
+    new ContactFormHandler();
+});
