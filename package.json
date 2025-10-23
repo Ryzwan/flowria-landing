@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "vercel-build": "echo \"Static deploy: no build step\""
+  }
+}
