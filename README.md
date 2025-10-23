@@ -210,7 +210,7 @@ git push origin main
 ## 👨‍💻 Support
 
 Pour toute question :
-- Email : contact@flowria.com
+- Email : contact@flowria.io
 - Basé à Marseille, France
 - Remote disponible partout
 
