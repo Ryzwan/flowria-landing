@@ -128,6 +128,7 @@ faqQuestions.forEach(question => {
 const contactForm = document.getElementById('contact-form');
 const formSuccess = document.getElementById('form-success');
 const formError = document.getElementById('form-error');
+const submitBtn = document.getElementById('submit-btn');
 
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -144,6 +145,7 @@ if (contactForm) {
         // Basic validation
         if (!data.name || !data.email || !data.message) {
             formError.style.display = 'flex';
+            formError.querySelector('p').textContent = 'Veuillez remplir tous les champs obligatoires.';
             return;
         }
         
@@ -155,29 +157,46 @@ if (contactForm) {
             return;
         }
         
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Envoi en cours...';
+        submitBtn.style.opacity = '0.7';
+        
         try {
-            // Here you would normally send the data to your backend
-            // For now, we'll simulate a successful submission
+            // Send data to Formspree
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             
-            // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            
-            // Show success message
-            formSuccess.style.display = 'flex';
-            contactForm.reset();
-            
-            // Log data (in production, this would be sent to your backend)
-            console.log('Form data:', data);
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                formSuccess.style.display = 'none';
-            }, 5000);
+            if (response.ok) {
+                // Show success message
+                formSuccess.style.display = 'flex';
+                contactForm.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formSuccess.style.display = 'none';
+                }, 5000);
+            } else {
+                // Show error message
+                formError.style.display = 'flex';
+                formError.querySelector('p').textContent = 'Une erreur est survenue. Merci de réessayer.';
+            }
             
         } catch (error) {
             console.error('Error:', error);
             formError.style.display = 'flex';
-            formError.querySelector('p').textContent = 'Une erreur s\'est produite. Veuillez réessayer.';
+            formError.querySelector('p').textContent = 'Une erreur est survenue. Merci de réessayer.';
+        } finally {
+            // Re-enable button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.style.opacity = '1';
         }
     });
 }
