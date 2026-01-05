@@ -446,6 +446,32 @@ section {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
+.cost-image-stat .stat-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.cost-image-stat .stat-content {
+    flex: 1;
+}
+
+.cost-image-stat .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.cost-image-stat .stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.2;
+}
+
 @media (max-width: 640px) {
     .cost-image-wrapper {
         height: 300px;
