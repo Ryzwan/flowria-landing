@@ -56,24 +56,6 @@
                         C'est une tâche répétitive, urgente, à faible valeur ajoutée.
                     </p>
                     
-                    <div class="hero-costs-block">
-                        <p class="hero-costs-title">Pourtant, elle repose sur :</p>
-                        <ul class="hero-costs-list">
-                            <li>des salariés</li>
-                            <li>des horaires</li>
-                            <li>de la formation</li>
-                            <li>des absences</li>
-                            <li>des erreurs humaines</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="hero-reality">
-                        <div class="hero-reality-icon">⚠️</div>
-                        <div>
-                            <strong>La réalité :</strong> Vous payez des salaires pour gérer une fonction qui génère du stress, des erreurs, et laisse échapper des ventes. Le client qui n'obtient pas de réponse immédiate va ailleurs.
-                        </div>
-                    </div>
-                    
                     <div class="hero-cta">
                         <a href="#contact" class="btn-primary btn-large">
                             Évaluer mon coût réel
@@ -85,20 +67,28 @@
                     </div>
                 </div>
                 
-                <div class="hero-image">
-                    <div class="hero-image-wrapper">
-                        <img src="assets/images/lp/file-attente-telephone-piece-auto-flowria.png" 
-                             alt="Employé de magasin au téléphone avec des clients qui attendent"
-                             loading="eager">
-                        <div class="hero-image-overlay">
-                            <div class="hero-image-stat">
-                                <div class="stat-icon">📞</div>
-                                <div class="stat-content">
-                                    <div class="stat-number">12</div>
-                                    <div class="stat-label">appels manqués</div>
-                                </div>
-                            </div>
+                <!-- SIMULATEUR INTERACTIF -->
+                <div class="simulator-card">
+                    <div class="simulator-header">
+                        <h3>Calculez votre manque à gagner</h3>
+                    </div>
+                    
+                    <div class="simulator-inputs">
+                        <div class="simulator-field">
+                            <label for="missed-calls">Appels manqués par jour</label>
+                            <input type="number" id="missed-calls" placeholder="5" min="0" value="5">
                         </div>
+                        
+                        <div class="simulator-field">
+                            <label for="avg-basket">Panier moyen (€)</label>
+                            <input type="number" id="avg-basket" placeholder="150" min="0" value="150">
+                        </div>
+                    </div>
+                    
+                    <div class="simulator-result">
+                        <div class="result-label">Ventes perdues par mois</div>
+                        <div class="result-value" id="lost-sales">7 500 €</div>
+                        <div class="result-note">Estimation basée sur un taux de conversion moyen de 40%</div>
                     </div>
                 </div>
             </div>
@@ -161,30 +151,27 @@
             
             <div class="cost-explanation">
                 <p class="cost-intro">
-                    Faites le calcul avec votre propre situation :
+                    Le simulateur vous a donné une première estimation. Mais ce n'est que la partie visible.
                 </p>
                 
-                <div class="cost-calculator">
-                    <div class="calc-row">
-                        <div class="calc-item">
-                            <div class="calc-number">?</div>
-                            <p>Appels manqués<br>par jour</p>
-                        </div>
-                        <span class="calc-symbol">×</span>
-                        <div class="calc-item">
-                            <div class="calc-number">~25</div>
-                            <p>Jours ouvrés<br>par mois</p>
-                        </div>
-                        <span class="calc-symbol">=</span>
-                        <div class="calc-item highlight">
-                            <div class="calc-number">?</div>
-                            <p>Opportunités<br>perdues/mois</p>
+                <div class="cost-visual">
+                    <div class="cost-image-wrapper">
+                        <img src="assets/images/lp/file-attente-telephone-piece-auto-flowria.png" 
+                             alt="Réalité terrain : files d'attente et appels manqués"
+                             loading="lazy">
+                        <div class="cost-image-overlay">
+                            <div class="cost-image-stat">
+                                <div class="stat-icon">⚠️</div>
+                                <div class="stat-content">
+                                    <div class="stat-number">Double perte</div>
+                                    <div class="stat-label">Coût humain + Ventes perdues</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="double-cost">
-                    <h3>La double peine</h3>
                     <div class="double-cost-grid">
                         <div class="cost-column">
                             <div class="cost-column-header">
@@ -223,24 +210,6 @@
                         <strong>Vous payez des humains pour une tâche que vos clients exigent immédiatement, mais qui ne crée aucune valeur.</strong>
                     </p>
                 </div>
-
-                <div class="cost-reasoning">
-                    <div class="reasoning-card">
-                        <h3>Pourquoi c'est une perte sèche ?</h3>
-                        <ul>
-                            <li>Un client qui appelle pour une pièce a un besoin immédiat</li>
-                            <li>Il compare 3-4 magasins avant de se déplacer</li>
-                            <li>Le premier qui répond et rassure fait la vente</li>
-                            <li>Personne ne laisse de message pour une pièce courante</li>
-                            <li>Même si vous rappelez 2h plus tard, c'est déjà trop tard</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <p class="cost-conclusion">
-                    <strong>La question n'est pas "combien d'appels je manque".</strong><br>
-                    La question est : <strong>"combien me coûte cette dépendance à la disponibilité humaine ?"</strong>
-                </p>
             </div>
         </div>
     </section>
@@ -507,7 +476,7 @@
                         </div>
 
                         <button type="submit" class="btn-primary btn-large" id="submit-btn">
-                            Calculer mon manque à gagner
+                            Discuter des solutions à mon problème
                             <svg viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/>
                             </svg>
@@ -590,6 +559,43 @@
             });
         });
 
+        // SIMULATEUR INTERACTIF - Calcul temps réel
+        const missedCallsInput = document.getElementById('missed-calls');
+        const avgBasketInput = document.getElementById('avg-basket');
+        const lostSalesDisplay = document.getElementById('lost-sales');
+        
+        // Fonction de formatage des nombres (espace pour milliers)
+        function formatNumber(num) {
+            return Math.round(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+        }
+        
+        // Fonction de calcul
+        function calculateLostSales() {
+            const missedCalls = parseFloat(missedCallsInput.value) || 0;
+            const avgBasket = parseFloat(avgBasketInput.value) || 0;
+            
+            // Formule : Appels manqués/jour × 25 jours × Panier moyen × 40% (taux conversion)
+            const workingDays = 25;
+            const conversionRate = 0.4;
+            const lostSales = missedCalls * workingDays * avgBasket * conversionRate;
+            
+            // Animation du changement
+            lostSalesDisplay.classList.add('updating');
+            
+            // Mise à jour de l'affichage
+            setTimeout(() => {
+                lostSalesDisplay.textContent = formatNumber(lostSales) + ' €';
+                lostSalesDisplay.classList.remove('updating');
+            }, 150);
+        }
+        
+        // Écouter les changements sur les inputs
+        missedCallsInput.addEventListener('input', calculateLostSales);
+        avgBasketInput.addEventListener('input', calculateLostSales);
+        
+        // Calcul initial au chargement
+        calculateLostSales();
+
         // Form handling
         const form = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
@@ -622,7 +628,7 @@
             } catch (error) {
                 errorMsg.style.display = 'block';
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Calculer mon manque à gagner <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>';
+                submitBtn.innerHTML = 'Discuter des solutions à mon problème <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>';
             }
         });
     </script>
