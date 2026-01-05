@@ -29,7 +29,7 @@
                     <img src="assets/logos/flowria-logo.png" alt="Flowria" width="32" height="32">
                     <span>Flowria</span>
                 </div>
-                <a href="#contact" class="btn-primary btn-small">Voir si je perds des ventes</a>
+                <a href="#contact" class="btn-primary btn-small">Évaluer mon coût réel</a>
             </div>
         </div>
     </header>
@@ -37,36 +37,70 @@
     <!-- Section 1: HERO -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Le vrai problème n'est pas le téléphone.<br>
-                    <span class="gradient-text">C'est ce qu'il vous coûte.</span>
-                </h1>
-                <div class="hero-explanation">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>Magasins de pièces auto</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Le vrai problème n'est pas le téléphone.
+                        <span class="gradient-text">C'est ce qu'il vous coûte.</span>
+                    </h1>
+                    
                     <p class="hero-intro">
                         Répondre au téléphone n'est pas une tâche de vente.<br>
                         C'est une tâche répétitive, urgente, à faible valeur ajoutée.
                     </p>
-                    <p class="hero-costs">
-                        Pourtant, elle repose sur :
-                    </p>
-                    <ul class="cost-list">
-                        <li>des salariés</li>
-                        <li>des horaires</li>
-                        <li>de la formation</li>
-                        <li>des absences</li>
-                        <li>des erreurs humaines</li>
-                    </ul>
+                    
+                    <div class="hero-costs-block">
+                        <p class="hero-costs-title">Pourtant, elle repose sur :</p>
+                        <ul class="hero-costs-list">
+                            <li>des salariés</li>
+                            <li>des horaires</li>
+                            <li>de la formation</li>
+                            <li>des absences</li>
+                            <li>des erreurs humaines</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hero-reality">
+                        <div class="hero-reality-icon">⚠️</div>
+                        <div>
+                            <strong>La réalité :</strong> Vous payez des salaires pour gérer une fonction qui génère du stress, des erreurs, et laisse échapper des ventes. Le client qui n'obtient pas de réponse immédiate va ailleurs.
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn-primary btn-large">
+                            Évaluer mon coût réel
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/>
+                            </svg>
+                        </a>
+                        <p class="hero-note">Sans engagement • Diagnostic gratuit</p>
+                    </div>
                 </div>
-                <p class="hero-transition">
-                    <strong>La réalité :</strong> Vous payez des salaires pour gérer une fonction qui génère du stress, des erreurs, et laisse échapper des ventes. Le client qui n'obtient pas de réponse immédiate va ailleurs.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn-primary btn-large">
-                        Voir si je perds des ventes
-                    </a>
+                
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/images/lp/file-attente-telephone-piece-auto-flowria.png" 
+                             alt="Employé de magasin au téléphone avec des clients qui attendent"
+                             loading="eager">
+                        <div class="hero-image-overlay">
+                            <div class="hero-image-stat">
+                                <div class="stat-icon">📞</div>
+                                <div class="stat-content">
+                                    <div class="stat-number">12</div>
+                                    <div class="stat-label">appels manqués</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="hero-note">Sans engagement • Diagnostic gratuit</p>
             </div>
         </div>
     </section>
@@ -76,6 +110,10 @@
         <div class="container">
             <h2 class="section-title">Ce que le téléphone vous coûte vraiment</h2>
             
+            <p class="situation-intro">
+                Le téléphone monopolise des ressources humaines coûteuses. Il interrompt les tâches à forte valeur (comptoir, conseil, vente) et crée une dépendance à la disponibilité de vos équipes.
+            </p>
+            
             <div class="situations-grid">
                 <div class="situation-card">
                     <div class="situation-icon">
@@ -83,8 +121,8 @@
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                         </svg>
                     </div>
-                    <h3>Le téléphone sonne</h3>
-                    <p>Vous êtes au comptoir avec un client. Le téléphone sonne. Vous ne pouvez pas décrocher. L'appel part sur répondeur.</p>
+                    <h3>Interruption permanente</h3>
+                    <p>Vous êtes au comptoir avec un client. Le téléphone sonne. Vous devez choisir : interrompre la vente en cours ou laisser partir l'appel sur répondeur.</p>
                 </div>
 
                 <div class="situation-card">
@@ -105,13 +143,13 @@
                             <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
                         </svg>
                     </div>
-                    <h3>Personne ne rappelle</h3>
+                    <h3>Personne disponible pour rappeler</h3>
                     <p>Le client ne laisse pas de message. Il n'attend pas votre rappel. Il appelle le magasin d'à côté. La vente est perdue.</p>
                 </div>
             </div>
 
             <div class="situation-reality">
-                <p><strong>Pendant ce temps,</strong> chaque appel non traité est une vente qui part chez un concurrent.</p>
+                <p><strong>Le téléphone n'est pas un problème technique.</strong> C'est une dépendance organisationnelle coûteuse.</p>
             </div>
         </div>
     </section>
@@ -145,6 +183,47 @@
                     </div>
                 </div>
 
+                <div class="double-cost">
+                    <h3>La double peine</h3>
+                    <div class="double-cost-grid">
+                        <div class="cost-column">
+                            <div class="cost-column-header">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                <h4>Coût humain</h4>
+                            </div>
+                            <ul>
+                                <li>Temps mobilisé sur une tâche répétitive</li>
+                                <li>Interruptions constantes</li>
+                                <li>Stress sur l'équipe</li>
+                                <li>Coût salarial invisible</li>
+                            </ul>
+                        </div>
+                        <div class="cost-column">
+                            <div class="cost-column-header">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="1" x2="12" y2="23"/>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                </svg>
+                                <h4>Opportunités perdues</h4>
+                            </div>
+                            <ul>
+                                <li>Ventes qui partent ailleurs</li>
+                                <li>Clients non rassurés</li>
+                                <li>Concurrence favorisée</li>
+                                <li>Chiffre d'affaires en moins</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="double-cost-conclusion">
+                        <strong>Vous payez des humains pour une tâche que vos clients exigent immédiatement, mais qui ne crée aucune valeur.</strong>
+                    </p>
+                </div>
+
                 <div class="cost-reasoning">
                     <div class="reasoning-card">
                         <h3>Pourquoi c'est une perte sèche ?</h3>
@@ -175,6 +254,13 @@
                 <p>
                     Un système de prise en charge téléphonique qui traite les demandes entrantes sans mobiliser vos équipes. 
                     Zéro dépendance humaine pour les tâches répétitives. Zéro appel perdu.
+                </p>
+            </div>
+
+            <div class="solution-philosophy">
+                <p>
+                    <strong>Vous n'automatisez pas pour remplacer des personnes.</strong><br>
+                    Vous automatisez pour retirer une tâche ingrate, coûteuse et instable de votre organisation.
                 </p>
             </div>
 
@@ -211,6 +297,9 @@
                     <li><strong>Équipe concentrée</strong> — Votre équipe peut se concentrer sur les clients au comptoir</li>
                     <li><strong>Clients rassurés</strong> — Réponse immédiate = confiance renforcée</li>
                     <li><strong>Ventes récupérées</strong> — Les clients ne vont plus appeler ailleurs par défaut</li>
+                    <li><strong>Organisation moins dépendante</strong> — Vous ne dépendez plus d'une personne clé pour gérer le téléphone</li>
+                    <li><strong>Charge humaine réduite</strong> — Réduction de la charge salariale indirecte sur cette fonction</li>
+                    <li><strong>Moins de pression</strong> — Votre équipe travaille sans le stress des interruptions constantes</li>
                 </ul>
             </div>
         </div>
@@ -234,6 +323,10 @@
                     <ul>
                         <li>Appels manqués pendant les heures de pointe</li>
                         <li>Téléphone qui sonne en boucle = stress</li>
+                        <li>Dépendance à une personne clé</li>
+                        <li>Difficulté à recruter/former sur cette fonction</li>
+                        <li>Turnover et absences problématiques</li>
+                        <li>Stress permanent sur l'équipe</li>
                         <li>Clients qui raccrochent sans laisser de message</li>
                         <li>Ventes qui partent chez les concurrents</li>
                         <li>Impossible d'estimer combien vous perdez</li>
@@ -251,6 +344,9 @@
                     <ul>
                         <li>Tous les appels traités, même en rush</li>
                         <li>Équipe sereine, focus sur le comptoir</li>
+                        <li>Organisation moins dépendante de l'humain</li>
+                        <li>Charge humaine maîtrisée</li>
+                        <li>Équipe recentrée sur la vraie vente</li>
                         <li>Clients rassurés dès la première sonnerie</li>
                         <li>Ventes récupérées et mesurées</li>
                         <li>Données claires sur votre activité téléphonique</li>
@@ -330,6 +426,19 @@
                     <h3>Quel budget ?</h3>
                     <p>On commence par un diagnostic gratuit pour voir si c'est pertinent pour vous. Ensuite, chiffrage clair avant toute mise en place.</p>
                 </div>
+
+                <div class="reassurance-item">
+                    <div class="reassurance-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Est-ce que ça permet de réduire la charge salariale ?</h3>
+                    <p>Oui. En retirant la gestion des appels répétitifs, vous réduisez le besoin de mobiliser des ressources humaines sur une tâche à faible valeur. L'objectif n'est pas de remplacer une équipe, mais de ne plus dépendre d'elle pour une fonction critique.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -339,7 +448,7 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
-                    <h2>Voir si vous perdez des ventes</h2>
+                    <h2>Évaluer mon coût réel</h2>
                     <p class="contact-description">
                         Décrivez-nous votre situation. On vous dit rapidement si un système de prise en charge des appels est pertinent pour votre magasin.
                     </p>
@@ -430,7 +539,7 @@
         </div>
     </section>
 
-    <!-- Footer Simple -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -439,11 +548,32 @@
                     <span>Flowria</span>
                 </div>
                 <p class="footer-text">
-                    Systèmes mesurables pour fonctions critiques d'entreprise
+                    Flowria — Identifie et remplace les fonctions saturées. Approche produit, IA et automatisation au service de la performance business.
                 </p>
+                
+                <div class="footer-info">
+                    <div class="footer-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Basé à Marseille – interventions France</span>
+                    </div>
+                    <div class="footer-contact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <a href="mailto:contact@flowria.io">contact@flowria.io</a>
+                    </div>
+                </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 Flowria. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
             </div>
         </div>
     </footer>
