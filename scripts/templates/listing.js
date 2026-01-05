@@ -73,10 +73,10 @@ function renderListing(articles) {
             <header class="section-header">
                 <p class="section-label">Blog</p>
                 <h1 class="section-title">
-                    Automatisation & IA pour <span class="gradient-text">TPE/PME</span>
+                    Fonctions critiques & performance <span class="gradient-text">business</span>
                 </h1>
                 <p class="section-description">
-                    Conseils pratiques, cas d'usage et actualités pour automatiser votre entreprise à Marseille et alentours
+                    Analyses, cas réels et décisions produit autour des systèmes qui impactent directement le chiffre d'affaires.
                 </p>
             </header>
             
